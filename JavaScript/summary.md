@@ -35,3 +35,39 @@ $\rightarrow$ html을 실행하다가도 execute를 위해 멈출 수 있고, sr
 - src가 3개라면 parsing하는 동안 모두 다운 받고 선언한 순서대로 실행한다
 
 $\rightarrow$ parsing을 먼저 끝내기 때문에 사용자가 src가 execute 되지 않아도 페이지를 볼 수 있다
+
+---
+
+## var 쓰지 마라 : block scope 무시, hoisting 떄문에
+
+```
+age = 4;
+var age;
+```
+
+$\rightarrow$ 선언 var age를 위로 끌어올려주는 hoisting 때문에 위와 같이 작성해도 에러가 나지 않는다
+
+---
+
+### variable
+
+- Number : JS에서는 숫자 타입이 number 하나뿐! 1.4도 number, 2도 number
+- String : JS에서는 문자 타입이 string 하나뿐! 'c'도 string, 'hello'도 string
+- Symbol : 고유한 식별자를 만들 때 사용된다
+
+```
+const symbol1= Symbol('id');
+const symbol2= Symbol('id');
+console.log(symbol1 === symbole2); //false
+```
+
+---
+
+### dynamic typing : 타입을 선언하지 않음
+
+```
+let text = 'hello'; //string
+text = 1; //number
+```
+
+$\rightarrow$ 이름은 text인데 자료형은 number인 상황 발생 - typeScript이 생기게 된 원인
