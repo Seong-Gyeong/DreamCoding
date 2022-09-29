@@ -67,5 +67,3 @@ const add = (a, b) => {
 (function hello() {
   console.log("IIFE");
 })(); //함수를 괄호로 감싸고 뒤에 함수 호출하듯이 괄호 넣어주면 선언 없이도 바로 호출됨
-
-//Quiz
